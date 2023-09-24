@@ -1,0 +1,11 @@
+<%= @outing.name %>
+<%= @outing.location %>
+<%= @outing.date %>
+
+<% @outing.contestants.each do |contestant| %>
+  <li><%= "Name: " %><%= link_to "#{contestant.name}", "/contestants/#{contestant.id}" %>
+  <%= link_to "Remove #{contestant.name}?", "/outings/#{@outing.id}?cont_id=#{contestant.id}", method: :delete %>
+  <li><%= "Age: #{contestant.age}" %>
+  <li><%= "Hometown: #{contestant.hometown}" %>
+<% end %> 
+  <li><%= "Number of contestants: #{@outing.get_contestant_count}" %>

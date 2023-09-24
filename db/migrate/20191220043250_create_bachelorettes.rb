@@ -3,6 +3,7 @@ class CreateBachelorettes < ActiveRecord::Migration[7.0]
     create_table :bachelorettes do |t|
       t.string :name
       t.integer :season_number
+      t.string :season_description
 
       t.timestamps
     end

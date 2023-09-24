@@ -1,0 +1,6 @@
+<%= @bachelorette.name %>
+<%= @bachelorette.season_number %>
+<%= @bachelorette.season_description %>
+
+<p><%= link_to "All contestants for #{@bachelorette.name}", "/bachelorettes/#{@bachelorette.id}/contestants" %></p>
+<h3> The average age of contestants: <%=@bachelorette.average_contestant_age%> </h3>

@@ -1,0 +1,7 @@
+<% @bachelorette.contestants.each do |contestant| %>
+  <li><%= "Name: " %><%= link_to "#{contestant.name}", "/contestants/#{contestant.id}" %>
+  <li><%= "Age: #{contestant.age}" %>
+  <li><%= "Home Town: #{contestant.hometown}" %>
+<% end %> 
+
+<h3> These contestants are from these hometowns: <%=@bachelorette.unique_towns%> </h3>

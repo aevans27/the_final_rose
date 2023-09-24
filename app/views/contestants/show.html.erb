@@ -1,0 +1,9 @@
+<%= @contestant.name %>
+<%= @contestant.bachelorette.season_number %>
+<%= @contestant.bachelorette.season_description %>
+
+<% @contestant.outings.each do |outing| %>
+  <li><%= "Name: " %><%= link_to "#{outing.name}", "/outings/#{outing.id}" %>
+  <li><%= "Location: #{outing.location}" %>
+  <li><%= "Date: #{outing.date}" %>
+<% end %> 
